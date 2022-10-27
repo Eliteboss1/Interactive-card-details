@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="left">
+          <div class="card">
+            <div class="front-card">
+              <img src="images/bg-card-front.png" />
+              <div class="card-container">
+                <div class="logo">
+                  <img src="images/card-logo.svg" />
+                </div>
+                <h1 id="zeros">0000 0000 0000 0000</h1>
+                <div class="card-details">
+                  <span id="name">Jane Appleseed</span>
+                  <span id="date">
+                    <span id="month">00</span>
+                    /
+                    <span id="year">00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="back-card">
+              <img src="images/bg-card-back.png" />
+              <span id="cvc">000</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="sam">
+            <form>
+              <div class="section">
+                <label form="card_name"> CARDHOLDER NAME </label>
+                <input
+                  type="text"
+                  placeholder="eg jane Appleseed"
+                  id="card_name"
+                  autocomplete="cc-number"
+                  pattern="\d*"
+                  required
+                />
+              </div>
+              <div class="section1">
+                <label form="card_number"> CARD NUMBER</label>
+                <!-- class="error" -->
+                <input
+                  type="tel"
+                  placeholder="eg 1234 5678 9123 0000"
+                  id="card_number"
+                  required
+                  maxlength="19"
+                  autocomplete="cc-number"
+                  pattern="\d*"
+                />
+                <small id="card_number_err">wrong format numbers only </small>
+              </div>
+              <div class="card-info">
+                <div id="card_date">
+                  <label form="card_date">EXP. DATE (MM/YY)</label>
+                  <div class="inputs">
+                    <input
+                      type="tel"
+                      placeholder="MM"
+                      id="card_month"
+                      autocomplete="cc-number"
+                      pattern="\d*"
+                      minlength="2"
+                      maxlength="2"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      placeholder="YY"
+                      id="card_year"
+                      autocomplete="cc-number"
+                      pattern="\d*"
+                      minlength="2"
+                      maxlength="2"
+                      required
+                    />
+                  </div>
+                  <small id="date_err"
+                    >can't be blank or not a valid month</small
+                  >
+                </div>
+                <div class="section2">
+                  <label form="card_cvc">CVC</label>
+                  <input
+                    type="tel"
+                    placeholder="eg 123"
+                    id="card_cvc"
+                    autocomplete="cc-number"
+                    pattern="\d*"
+                    maxlength="3"
+                    required
+                  />
+                  <small id="card_cvc_err">can't be blank</small>
+                </div>
+              </div>
+              <button id="submit_btn" type="button">Confirm</button>
+            </form>
+          </div>
+          <div class="thank_you">
+            <img src="images/icon-complete.svg" />
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button id="confirm_btn" type="button">Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./danny.js"></script>
+</html>

@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100vh;
+}
+.thank_you {
+  display: none;
+  font-family: "Space Grotesk";
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thank_you img {
+  height: 55px;
+
+  margin-bottom: 20px;
+}
+.thank_you h1 {
+  letter-spacing: 3px;
+  font-size: 22px;
+  color: hsl(278, 68%, 11%);
+  margin-bottom: 7px;
+}
+.thank_you p {
+  margin-bottom: 33px;
+  font-size: 16px;
+  color: hsl(279, 6%, 55%);
+}
+#confirm_btn {
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  width: 250px;
+  height: 40px;
+  font-size: 14px;
+  font-family: "Space Grotesk";
+
+  padding-right: 9px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+#confirm_btn:hover {
+  background-color: hsl(279, 6%, 55%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+.left {
+  min-height: 100vh;
+  width: 40%;
+  background-image: url(images/bg-main-desktop.png);
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.front-card {
+  position: relative;
+  transform: translate(-25%);
+}
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+}
+#zeros {
+  position: absolute;
+  color: white;
+  bottom: 5rem;
+  left: 2rem;
+  letter-spacing: 2px;
+}
+.card-details {
+  position: absolute;
+  bottom: 2rem;
+  left: 30px;
+  right: 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 18px;
+}
+.back-card {
+  position: relative;
+  transform: translate(-7%);
+}
+#cvc {
+  position: absolute;
+  color: white;
+  bottom: 7rem;
+  left: 22rem;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 300px;
+  padding-bottom: 200px;
+  font-size: 18px;
+  font-family: "Space Grotesk";
+  text-decoration-color: hsl(279, 6%, 55%);
+}
+
+#card_name {
+  width: 60%;
+  display: block;
+  border-radius: 7px;
+  height: 30px;
+  border-color: rgb(233, 225, 238);
+
+  padding-left: 10px;
+}
+
+#card_number {
+  padding-left: 10px;
+  width: 60%;
+  display: block;
+  border-radius: 7px;
+  height: 30px;
+  border-color: rgb(230, 222, 235);
+}
+.card-info {
+  display: flex;
+  max-width: 60%;
+}
+#card_month,
+#card_year {
+  width: 38%;
+  text-align: center;
+  height: 20px;
+  border-radius: 4px;
+  border-color: rgb(233, 225, 238);
+}
+#card_cvc {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  border-color: rgb(233, 225, 238);
+}
+label {
+  font-size: 12px;
+}
+#submit_btn {
+  margin-top: 30px;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 8px;
+  border: none;
+  height: 40px;
+  width: 320px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+#submit_btn:hover {
+  background-color: hsl(279, 6%, 55%);
+}
+input:focus {
+  border: 2px;
+  border-style: solid;
+  border-color: hsl(278, 76%, 10%);
+  outline: none;
+}
+input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+}
+.error {
+  border-color: hsl(0, 100%, 66%) !important;
+}
+small {
+  font-size: 10px;
+  padding: 0;
+  display: none;
+  margin: 0;
+  color: hsl(0, 100%, 66%);
+}
