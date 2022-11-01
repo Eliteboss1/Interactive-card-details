@@ -44,81 +44,87 @@
             </div>
           </div>
         </div>
-        <div class="right">
-          <div class="sam">
-            <form>
-              <div class="section">
-                <label form="card_name"> CARDHOLDER NAME </label>
-                <input
-                  type="text"
-                  placeholder="eg jane Appleseed"
-                  id="card_name"
-                  autocomplete="cc-number"
-                  pattern="\d*"
-                  required
-                />
-              </div>
-              <div class="section1">
-                <label form="card_number"> CARD NUMBER</label>
-                <!-- class="error" -->
-                <input
-                  type="tel"
-                  placeholder="eg 1234 5678 9123 0000"
-                  id="card_number"
-                  required
-                  maxlength="19"
-                  autocomplete="cc-number"
-                  pattern="\d*"
-                />
-                <small id="card_number_err">wrong format numbers only </small>
-              </div>
-              <div class="card-info">
-                <div id="card_date">
-                  <label form="card_date">EXP. DATE (MM/YY)</label>
-                  <div class="inputs">
-                    <input
-                      type="tel"
-                      placeholder="MM"
-                      id="card_month"
-                      autocomplete="cc-number"
-                      pattern="\d*"
-                      minlength="2"
-                      maxlength="2"
-                      required
-                    />
-                    <input
-                      type="tel"
-                      placeholder="YY"
-                      id="card_year"
-                      autocomplete="cc-number"
-                      pattern="\d*"
-                      minlength="2"
-                      maxlength="2"
-                      required
-                    />
-                  </div>
-                  <small id="date_err"
-                    >can't be blank or not a valid month</small
-                  >
-                </div>
-                <div class="section2">
-                  <label form="card_cvc">CVC</label>
+          <div class="right" id="form">
+            <div class="sam">
+              <form>
+                <div class="section">
+                  <label form="card_name"> CARDHOLDER NAME </label>
                   <input
-                    type="tel"
-                    placeholder="eg 123"
-                    id="card_cvc"
+                    type="text"
+                    placeholder="eg jane Appleseed"
+                    id="card_name"
                     autocomplete="cc-number"
                     pattern="\d*"
-                    maxlength="3"
                     required
+                    oninput="handleClick(this)"
                   />
-                  <small id="card_cvc_err">can't be blank</small>
                 </div>
-              </div>
-              <button id="submit_btn" type="button">Confirm</button>
-            </form>
+                <div class="section1">
+                  <label form="card_number"> CARD NUMBER</label>
+                   
+                  <input
+                    type="tel"
+                    placeholder="eg 0000 0000 0000 0000"
+                    id="card_number"
+                    oninput="handleClick(this)"
+                    required
+                    maxlength="19"
+                    autocomplete="cc-number"
+                    pattern="\d*"
+                  />
+                  <small id="card_number_err">wrong format numbers only </small>
+                </div>
+                <div class="card-info">
+                  <div id="card_date">
+                    <label form="card_date">EXP. DATE (MM/YY)</label>
+                    <div class="inputs">
+                      <input
+                        type="tel"
+                        placeholder="MM"
+                        id="card_month"
+                        autocomplete="cc-number"
+                        pattern="\d*"
+                        minlength="2"
+                        maxlength="2"
+                        required
+                        oninput="handleClick(this)"
+                      />
+                      <input
+                        type="tel"
+                        oninput="handleClick(this)"
+                        placeholder="YY"
+                        id="card_year"
+                        autocomplete="cc-number"
+                        pattern="\d*"
+                        minlength="2"
+                        maxlength="2"
+                        required
+                      />
+                    </div>
+                    <small id="date_err"
+                      >can't be blank or not a valid month</small
+                    >
+                  </div>
+                  <div class="section2">
+                    <label form="card_cvc">CVC</label>
+                    <input
+                      type="tel"
+                      placeholder="eg 123"
+                      id="card_cvc"
+                      autocomplete="cc-number"
+                      oninput="handleClick(this)"
+                      pattern="\d*"
+                      maxlength="3"
+                      required
+                    />
+                    <small id="card_cvc_err">can't be blank</small>
+                  </div>
+                </div>
+                <button id="submit_btn" type="button">Confirm</button>
+              </form>
+            </div>
           </div>
-          <div class="thank_you">
+          <div class="thank_you" id="thank-you">
             <img src="images/icon-complete.svg" />
             <h1>THANK YOU!</h1>
             <p>We've added your card details</p>
@@ -129,4 +135,5 @@
     </main>
   </body>
   <script src="./danny.js"></script>
-</html>
+  <script></script>
+</html> -->
